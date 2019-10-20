@@ -1,4 +1,4 @@
-import math
+import math, random
 """# z.10
 x=7
 y=34
@@ -42,9 +42,27 @@ for x in range(2,len(rach)):
     if x%4 ==2:
         print(" ",end='')
     print(rach[x],end='')
-    """
+    
 
 #z27
 lica=int(input())
 licb=int(input())
 print(f"Najwiekszy wspólny dzielnik liczb: {lica}, {licb} :",math.gcd(lica,licb))
+
+#28
+kostka1=random.randint(1,6)
+kostka2=random.randint(1,6)
+kostka3=random.randint(1,6)
+print("Wyrzucone liczby: ",kostka1,kostka2,kostka3 )
+print("Suma wyrzuconych oczek: ", kostka1+kostka2+kostka3 )
+
+#29
+kostkacpu=random.randint(1,6)
+odp=int(input())
+print( odp==kostkacpu )
+
+#30
+tab30=[12,6,4,9,3]
+for x in tab30:
+    print(x ,": ",'*'*x)
+"""
