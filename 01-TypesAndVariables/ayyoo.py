@@ -1,3 +1,4 @@
+import math
 """# z.10
 x=7
 y=34
@@ -29,7 +30,21 @@ print(len(imiona))
     #b
 print(imiona[0])
     #c
-print(imiona[len(imiona)-1])"""
+print(imiona[len(imiona)-1])
 # z.15
 liczba=int(input())
 print(f'Warosc liczby to {liczba},a {liczba**2} to jej potega')
+
+#z25
+rach=list(input())
+print(f"Nr rachunku: {rach[0]}{rach[1]} ", end='')
+for x in range(2,len(rach)):
+    if x%4 ==2:
+        print(" ",end='')
+    print(rach[x],end='')
+    """
+
+#z27
+lica=int(input())
+licb=int(input())
+print(f"Najwiekszy wspólny dzielnik liczb: {lica}, {licb} :",math.gcd(lica,licb))
