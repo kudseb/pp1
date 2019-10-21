@@ -42,7 +42,7 @@ elif x13<0 and y13<0:
     print("Punkt {x13} {y13} znajduję sie w III ćwiartce")
 elif x13>0 and y13<0:
     print("Punkt {x13} {y13} znajduję sie w IV ćwiartce")
-"""
+
 #14
 print("Podaj wiek psa w psich latach: ",end='')
 x14=int(input())
@@ -54,3 +54,52 @@ if x14>2:
 else:
     wynik14+=x14*10.5
 print(f"Wiek psa w psich latach to {round(wynik14)} lata")
+
+#LOOOOOPSS
+#15
+x15=int(input())
+#for i15 in range(1,11):
+#    print(f"{x15} x {i15} = {x15*i15}")
+i15=1
+while i15<=10:
+    print(f"{x15} x {i15} = {x15*i15}")
+    i15+=1
+
+#16
+for i16 in range(1,11):
+    print(f"1/{i16} = {1/i16}")
+
+#17
+sparz=0
+snieparz=0
+for i17 in range(1,51):
+    if i17%2==0:
+        sparz+=i17
+    else:
+        snieparz+=i17
+print(f"Suma parzystych: {sparz} ,a nieparzystych : {snieparz}")
+
+#18
+for i18 in range(1,31):
+    if i18%3==0 and i18%5==0:
+       print("BINGO ", end='')
+    elif i18%3 == 0:
+        print("THREE ",end='') 
+    elif i18%5 == 0:
+        print("FIVE " , end='')
+    else:       
+        print(f"{i18} ",end='')
+
+#22
+tab22=[15,8,31,47,2,19]
+n=0
+sumtab22=0
+for i in tab22:
+    if i %2 == 1:
+        sumtab22+=i
+        n+=1
+print(f"Srednia artymetyczna = {round(sumtab22/n,2)}")
+"""
+#23
+print("Podaj ocene od 1 do 6 : ")
+x23=int(input())
