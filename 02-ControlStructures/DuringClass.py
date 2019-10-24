@@ -90,6 +90,14 @@ for i18 in range(1,31):
     else:       
         print(f"{i18} ",end='')
 
+#19
+print('podaj ile wyrazow ciagu wyswietlic : ')
+n19=int(input())
+wyrazciag=1
+for i in range(n19):
+    print(f'{i+1} wyraz ciagu = ',wyrazciag+i*3)
+
+
 #22
 tab22=[15,8,31,47,2,19]
 n=0
@@ -99,7 +107,19 @@ for i in tab22:
         sumtab22+=i
         n+=1
 print(f"Srednia artymetyczna = {round(sumtab22/n,2)}")
-"""
+
 #23
 print("Podaj ocene od 1 do 6 : ")
 x23=int(input())
+tab23=['niedostateczny','mierny','dostateczny','dobry','bardzo dobry','celujacy']
+print(f'Ocena slownie: {tab23[x23-1]}')
+#24
+tab24=['Genowefa', 'Onufry', 'Celestyna', 'Alojzy', 'Pankracy', 'Teofil']
+spam24=[0,0]
+for i in tab24:
+    x=len(i)
+    if x>spam24[0]:
+        spam24[0]=x
+        spam24[1]=i
+print(f'najdluzsze imie: {spam24[1]}')
+"""
