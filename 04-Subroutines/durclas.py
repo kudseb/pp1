@@ -1,3 +1,5 @@
+import random
+import copy
 #5
 '''
 def printName():
@@ -75,7 +77,7 @@ def wystepuje(tab,szuk):
 print(f" Podana liczba {wystepuje([15,38,7,23,14],23)} w tablicy")
 
 #17
-import random
+
 def rzucKostka():
     return random.randint(1,6)
 suma=0
@@ -168,12 +170,113 @@ def ilsamwtesk(tekst='Nam strzelać nie kazano. Wstąpiłem na działo. I spojrz
     print(samog)
     print(czest)
 ilsamwtesk()
-'''
+
 #28
 nazwy=['java','python','js','c++','c#','ruby','perl','php','c','android']
 val=[61,47,37,32,26,18,14,14,9,7]
 def rysujWykres(jezyki,wartosci):
     for i in range(0,len(jezyki)):
-        print(f'')
-        
+        print(f'{jezyki[i]} : ',end='')
+        x=val[i]
+        while x>2:
+            print('#',end='')
+            x-=2
+        print()
 rysujWykres(nazwy,val)
+
+#29
+tab29=[2,3,5,2,9,8,1,3,9,1,1,4,7,7,1,4]
+def mediana(tab):
+    tab.sort()
+    y=len(tab)//2
+    if len(tab)%2==0:
+        return tab[y]+tab[y+1]
+    else:
+        return tab[y]
+def dominanta(tab):
+    tabczest=[[tab[0],0]]
+    for i in tab:
+        powtarz=False
+        for j in range(0,len(tabczest)):
+            if i==tabczest[j][0]:
+                tabczest[j][1]+=1
+                powtarz=True
+                break
+        if powtarz==False:
+            tabczest.append([i,1])
+    najw=0
+    for i in range(len(tabczest)-1):
+        if tabczest[i-1][1]>tabczest[i][1]:
+            najw=tabczest[i-1][0]
+        else:
+            najw=tabczest[i][0]
+    return najw
+print(dominanta(tab29))
+print(mediana(tab29))
+
+#30
+def los():
+    return random.randint(1,50)
+parz=0
+nieparz=0
+for i in range(1000):
+    x=los()
+    if x%2==0:
+        parz+=1
+    else:
+        nieparz+=1
+print(f'Liczby parzyste {round(parz/10,2)}%')
+print(f'Liczby nieparzyste {round(nieparz/10,2)}%')
+
+#31
+def reverse(tab):
+    tab2b=[]
+    i=len(tab)-1
+    while i>=0:
+        tab2b.append(tab[i])
+        i-=1
+    return tab2b
+tab=[2,5,4,1,8,7,0,9]
+print(reverse(tab))
+
+#32
+def transpozycja(macierz):
+    macierz2b = copy.deepcopy(macierz)
+    for i in range(0,len(macierz)):    
+        for j in range(0,len(macierz[i])):
+            macierz2b[j][i]=macierz[i][j]
+    return macierz2b
+macierz=[[1,2,0],
+         [0,0,3],
+         [5,1,1]]
+print(macierz)
+print(transpozycja(macierz))
+
+#33
+def fib(n):
+    a,b = 0,1
+    for i in range(n):
+        a,b = b,a+b
+        print(a)
+fib(20)
+#34
+#moze mozna dodac print do return i wtedy nie trzeba petli
+def fibi(n):
+    if n==0 or n==1:
+        return 1;
+    else:
+        return fibi(n-1)+fibi(n-2)
+for i in range(20):
+    print(fibi(i))
+
+#35
+
+def z35(n):
+    if n//10==0:
+        return n
+    else:
+        return n%10+z35(n//10)
+print(z35(12345589))
+'''
+#36
+tab=[7,5,[3,6,[2]],7,[1,[2,3,[4]],9,2],4]
