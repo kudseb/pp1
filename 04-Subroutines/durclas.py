@@ -277,6 +277,66 @@ def z35(n):
     else:
         return n%10+z35(n//10)
 print(z35(12345589))
+
+#36 no idea
 '''
-#36
 tab=[7,5,[3,6,[2]],7,[1,[2,3,[4]],9,2],4]
+def z36(tab):
+    if isinstance(tab,int):
+        return tab
+    else:
+        if isinstance(tab[0],int):
+            return tab.pop(0)+z36(tab)
+        else:
+            suma=0
+            for i in range(0,len(tab[0])):
+                if isinstance(tab[0][i],int):
+                  suma+=tab[0][i]
+                else:
+                    z36[tab[0].pop(i)]
+            return suma
+tab22=[2,3,1,[1,2,3]]
+z36(tab)
+'''
+#37 #mozna by bylo posortowac tablice i sprawdzic czy po lewej i prwaej nie ma takich samych wartosci
+def z37(tab):
+    tab2=[]
+    for i in range(0,len(tab)):
+        powtarz=False
+        for j in range(0,len(tab)):
+            if i==j:
+                pass
+            else:
+                if tab[i]==tab[j]:
+                    powtarz=True
+        if powtarz==False:
+            tab2.append(tab[i])
+    return tab2
+print(z37([2,5,7,2,5,7,1,1,2,8,9,100,90]))
+
+#38
+def z38(s):
+    res=''
+    for i in s:
+        if ord(i) >=65 and ord(i)<=90:
+            res+=(i)
+    return res
+print(z38('Ala ma kota,Darek Maciborek, Kapitan Gwiezdenej Floty'))
+
+#39
+def z39(n,x,y):
+    if y<x:
+        x,y=y,x
+    if n>=x and n<=y:
+        return 'miesci sie'
+    else:
+        return 'nie miesci sie'
+print(z39(10,10,3))
+
+#40
+lam=lambda x : not(x%2)
+tab=[1,2,3,4,5,6,7,8]
+x=filter(lam,tab)
+for i in x:
+    print(i)
+'''
