@@ -37,5 +37,14 @@ with open('employees.csv', 'r') as f:
 #7
 import square
 '''
+#8
+import shapes
 
+#shapes.drawSquare(0,0,200)
+#shapes.matr(100,-100,100)
+#9
+#10
+import QE 
+QE.qe()
 #11
+#done

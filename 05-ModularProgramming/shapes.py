@@ -1,0 +1,41 @@
+import turtle
+def drawSquare(x,y,n):
+    pen=turtle.Turtle()
+    pen.penup()
+    pen.setposition(x,y)
+    pen.setheading(0)
+    pen.pendown()
+    for i in range(4):
+        pen.forward(n)
+        pen.right(90)
+    turtle.done()
+def matr(x,y,n):
+    pen=turtle.Turtle()
+    pen.penup()
+    pen.setposition(x,y)
+    pen.setheading(0)
+    pen.pendown()
+    for i in range(4):
+        pen.forward(n)
+        pen.right(90)
+    for i in range(3):   
+        pen.forward(n/4)
+        pen.right(90)
+        pen.forward(n)
+        pen.up()
+        pen.setpos(x+(n/4)*(i+1),y)
+        pen.left(90)
+        pen.down()
+    pen.up()
+    pen.setposition(x,y)
+    pen.setheading(270)
+    pen.down()
+    for i in range(3):   
+        pen.forward(n/4)
+        pen.left(90)
+        pen.forward(n)
+        pen.up()
+        pen.setpos(x,y-(n/4)*(i+1))
+        pen.right(90)
+        pen.down()
+    turtle.done()
